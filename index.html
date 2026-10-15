@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10243b">
+  <title>UK Cold-Call Trainer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-icon" aria-hidden="true">☎</div>
+      <div class="brand-copy">
+        <p class="eyebrow">SALES PRACTICE LAB</p>
+        <h1>UK Cold-Call Trainer</h1>
+        <p class="subheading">Data centre sales · Simulated calls only</p>
+      </div>
+      <span class="status-pill"><span class="status-dot"></span> Practice mode</span>
+    </header>
+
+    <main>
+      <section class="setup-card" aria-labelledby="setup-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR NEXT PRACTICE SESSION</p>
+            <h2 id="setup-heading">Configure your call</h2>
+          </div>
+          <span class="step-number">01</span>
+        </div>
+
+        <div class="field-grid">
+          <div class="field">
+            <label for="mode">Difficulty</label>
+            <select id="mode">
+              <option value="easy" selected>Easy · Helpful prospect</option>
+              <option value="medium">Medium · Busy prospect</option>
+              <option value="hard">Hard · Sceptical prospect</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="gender">Prospect voice</label>
+            <select id="gender">
+              <option value="female" selected>Female British English</option>
+              <option value="male">Male British English</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="role">Prospect job role</label>
+            <select id="role">
+              <option value="it" selected>IT Director</option>
+              <option value="dc">Data Centre Manager</option>
+              <option value="procurement">Procurement Manager</option>
+              <option value="cto">Chief Technology Officer</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="whoStarts">Who starts the call?</label>
+            <select id="whoStarts">
+              <option value="me" selected>I start</option>
+              <option value="client">Client starts</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="prospect-card">
+          <div class="avatar" id="avatar" aria-hidden="true">👩🏻‍💼</div>
+          <div class="prospect-details">
+            <p class="eyebrow">YOUR PROSPECT</p>
+            <h3 id="prospectName">Sarah Williams</h3>
+            <p id="prospectRole">IT Director · United Kingdom</p>
+          </div>
+          <span class="presence"><span class="presence-dot"></span> Simulated</span>
+        </div>
+
+        <button id="startCall" class="button button-primary" type="button">☎ Start Call</button>
+        <p id="callStatus" class="status-message" role="status" aria-live="polite">Ready to practise. Choose your options and start a call.</p>
+        <p id="voiceInfo" class="small-note">Voice availability depends on the voices installed in your browser or operating system.</p>
+      </section>
+
+      <section class="practice-card" aria-labelledby="practice-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">LIVE PRACTICE</p>
+            <h2 id="practice-heading">Call transcript</h2>
+          </div>
+          <span class="step-number">02</span>
+        </div>
+        <p class="section-copy">Speak naturally when it is your turn. Your words will appear here, and the prospect will reply aloud.</p>
+        <div class="mic-status-row">
+          <span class="mic-indicator" id="micIndicator"></span>
+          <p id="micStatus" class="status-message" role="status" aria-live="polite">Microphone is off.</p>
+        </div>
+        <div class="transcript-panel">
+          <div class="transcript-head">
+            <strong>Live transcript</strong>
+            <span class="live-label"><span class="presence-dot"></span> LIVE</span>
+          </div>
+          <div id="transcript" class="transcript-text" aria-live="polite"><span class="placeholder">Your conversation will appear here…</span></div>
+        </div>
+        <button id="clearTranscriptBtn" class="text-button" type="button">Clear transcript</button>
+      </section>
+
+      <section class="tip-card">
+        <div class="tip-icon" aria-hidden="true">✦</div>
+        <div>
+          <h2>Quick practice tip</h2>
+          <p>Introduce yourself, explain why you are calling, then ask one relevant discovery question. Keep it natural and concise.</p>
+        </div>
+      </section>
+    </main>
+    <footer>Built for practice only · No real telephone calls are made · No paid API key required</footer>
+  </div>
+</body>
+</html>
